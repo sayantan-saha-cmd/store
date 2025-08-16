@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Storage System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Login Screen -->
+        <div id="login-screen" class="screen">
+            <h1>File Storage System</h1>
+            <div class="form-group">
+                <label for="pin-input">Enter 4-Digit PIN</label>
+                <input type="password" id="pin-input" maxlength="4" pattern="\d{4}" placeholder="1234" required>
+                <button id="login-btn" class="btn">Login</button>
+                <p id="login-error" class="error-message"></p>
+            </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard" class="screen hidden">
+            <header>
+                <h1>Welcome, <span id="username-display"></span></h1>
+                <button id="logout-btn" class="btn logout">Logout</button>
+            </header>
+
+            <div class="upload-section">
+                <h2>Upload Files</h2>
+                <div class="file-upload">
+                    <input type="file" id="file-input" multiple>
+                    <button id="upload-btn" class="btn">Upload</button>
+                    <div id="upload-progress"></div>
+                </div>
+            </div>
+
+            <div class="file-list-section">
+                <h2>Your Files</h2>
+                <div id="file-list-container">
+                    <p id="no-files-message">No files uploaded yet.</p>
+                    <ul id="file-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
